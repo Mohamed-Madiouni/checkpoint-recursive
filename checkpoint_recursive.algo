@@ -1,0 +1,11 @@
+FUNCTION Is_palindrome (str:STRING,l,h,n:INTEGER) : STRING // l:lower index, h:high index, n: numbers of elements
+BEGIN
+    IF (str="" || n=1) THEN
+        RETURN 'is palindrone'
+    ELSE IF (str[l]=str[h]) THEN
+        RETURN is_palindrome(str,l+1,h-1,n-2)
+    END_IF
+    ELSE
+    RETURN "is not palindrome" ;
+    END_IF
+END
